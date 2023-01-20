@@ -1,26 +1,26 @@
 export const countryStyles = `<style>
   .country {
-    font-size: 38px;
+    font-size: 30px;
   }
 
   .countries {
-    font-size: 23px;
-    font-weight: 650;
+    font-size: 20px;
+    font-weight: 600;
   }
   
   .country-list {
     list-style: none;
-    padding-left: 5px;
+    padding-left: 15px;
   }
 
   .info {
-    font-size: 28px;
+    font-size: 30px;
     margin-bottom: 15px;
     margin-top: 15px;
   }
 
   .header-span {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
   }
 
@@ -31,7 +31,7 @@ export const countryStyles = `<style>
 
   .flags {
     width: 50px;
-    margin-right: 14px;
+    margin-right: 15px;
   }
 
   .flags-mini {
