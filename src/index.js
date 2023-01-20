@@ -5,7 +5,7 @@ import createCountryCard from './createCard';
 import createListCountry from './createCountry';
 import { clearCards } from './clear';
 import { clearVariables } from './clear';
-import { countryStyles } from './style';
+import { countryStyles } from './styles';
 
 let request;
 
