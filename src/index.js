@@ -3,8 +3,8 @@ import fetchCountries from './fetchCountries';
 import Notiflix from 'notiflix';
 import createCountryCard from './createCard';
 import createListCountry from './createCountry';
-import { clearCard } from './clear';
-import { clearList } from './clear';
+import { clearCards } from './clear';
+import { clearVariables } from './clear';
 import { countryStyles } from './style';
 
 let request;
@@ -25,8 +25,8 @@ inputForCountry.addEventListener(
 export default function searchRequest() {
   request = inputForCountry.value.trim();
   if (!request) {
-    clearCard();
-    clearList();
+    clearCards();
+    clearVariables();
   }
   fetchCountries(request)
     .then(data => {
