@@ -41,8 +41,8 @@ export default function searchRequest() {
       } else if (data.length > 1 && data.length <= 10) {
         createListCountry(data);
       }
-      else if (data.length === 0){
-        Notiflix.Notify.failure('Write a country name!')
+      else if (foundData.length === 0) {
+        Notiflix.Notify.failure('Oops, there is no country with that name');
       }
     })
     .catch(() => {});
