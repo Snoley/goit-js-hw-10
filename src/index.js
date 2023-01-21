@@ -34,10 +34,15 @@ export default function searchRequest() {
         Notiflix.Notify.info(
           'Too many matches found. Please enter a more specific name.'
         );
+        clearCards();
+        clearVariables();
       } else if (data.length === 1) {
         createCountryCard(data);
       } else if (data.length > 1 && data.length <= 10) {
         createListCountry(data);
+      }
+      else if (data.length === 0){
+        Notiflix.Notify.failure('Write a country name!')
       }
     })
     .catch(() => {});
