@@ -23,11 +23,10 @@ inputForCountry.addEventListener(
 );
 
 export default function searchRequest() {
-  request = inputForCountry.value.trim();
-  if (!request) {
+  const request = inputForCountry.value.trim();
     clearCards();
     clearVariables();
-  }
+    if (request !== '') {
   fetchCountries(request)
     .then(data => {
       if (data.length > 10) {
@@ -36,15 +35,18 @@ export default function searchRequest() {
         );
         clearCards();
         clearVariables();
-      } else if (data.length === 1) {
+      } 
+      else if (data.length === 0) {
+        Notiflix.Notify.failure('Oops, there is no country with that name');
+      }
+      else if (data.length === 1) {
         createCountryCard(data);
       } else if (data.length >= 2 && data.length <= 10) {
         createListCountry(data);
       }
-      else if (data.length === 0) {
-        Notiflix.Notify.failure('Write a country!');
-      }
+      
     })
     .catch(() => {});
+}
 }
 
